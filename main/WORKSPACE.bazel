@@ -1,0 +1,7 @@
+load("//:defs.bzl", "setup_repository")
+
+local_repository(name="other", path="../other")
+setup_repository(name="some_repository", ref="@other//:file")
+#setup_repository(name="some_repository", ref="@other//:some_file")
+load("@some_repository//:defs.bzl", "fn")
+fn()

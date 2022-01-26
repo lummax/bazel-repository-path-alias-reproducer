@@ -1,0 +1,2 @@
+alias(name="file", actual="some_file")
+exports_files(["some_file"])
